@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Reporte</title>
+    <style>
+        .border {
+            border: 1px solid #939598;
+        }
+
+        .borderR {
+            border-radius: 0px 10px 0px 0px;
+            background-color: #58585A;
+        }
+
+        b {
+            color: #58585A;
+        }
+
+
+        .border1 {
+        }
+
+        .border2 {
+            border-radius: 0px 130px 130px 0px;
+            -webkit-border-radius: 0px 130px 130px 0px;
+            -moz-border-radius: 0px 130px 130px 0px;
+        }
+
+        .font-family {
+            font-family: Rubic, sans-serif;
+            color: #939598;
+        }
+    </style>
+</head>
+<body>
+
+<div class="font-family" style=" margin: 16px ">
+    <div>
+        <table style="margin-top: 20px">
+            <tr>
+                <td>
+                    <h3 style=" ; font-size: 20px; width: 350px"><b>Informe de Visita de Obra
+                            # <%= q137_idUnico %></b></h3>
+                </td>
+                <td>
+                    <div class="" style="text-align: right;">
+                        <img src="data:image/png;base64,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"
+                             alt="manager">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="font-size: 9px">
+        <table style="border: 1px solid black; padding: 2px; width: 100%; ">
+            <tr style="border: 1px solid black;">
+                <td style="width: 100px; font-size: 8px;">
+                    <h3></h3>
+                </td>
+                <td style="border-left: 1px solid black; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <h3><b>Proyecto: </b> <%= name %></h3>
+                    </div>
+                </td>
+                <td style="border-left: 1px solid black; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <h3><b>Módulo #: </b> <%= module %></h3>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="font-size: 9px;">
+        <table>
+            <tr style="border: 1px solid black;">
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxnPgoJCQk8Zz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yODYuOCwyNjguNEg3Ni42Vjg2aDIxMC4zVjI2OC40eiBNODQuNiwyNjAuM2gxOTQuMlY5NC4xSDg0LjZWMjYwLjN6Ii8+CgkJCTwvZz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQk8cG9seWdvbiBjbGFzcz0ic3QxIiBwb2ludHM9IjI0Mi40LDIzOS44IDQzLjUsMjM5LjggODEsMTM2LjEgMjgwLDEzNi4xIAkJCQkJIi8+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjQ1LjMsMjQzLjhIMzcuOEw3OC4yLDEzMmgyMDcuNUwyNDUuMywyNDMuOHogTTQ5LjIsMjM1LjhoMTkwLjRsMzQuNi05NS43SDgzLjlMNDkuMiwyMzUuOHoiLz4KCQkJCTwvZz4KCQkJPC9nPgoJCTwvZz4KCQk8Zz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTI0LjEsMTA5LjZMMTI0LjEsMTA5LjZjLTQuMSwwLTcuNC0zLjMtNy40LTcuNHYtMjNjMC00LjEsMy4zLTcuNCw3LjQtNy40aDBjNC4xLDAsNy40LDMuMyw3LjQsNy40djIzCgkJCQkJCUMxMzEuNiwxMDYuMywxMjguMiwxMDkuNiwxMjQuMSwxMDkuNnoiLz4KCQkJCTwvZz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xODUsMTA5LjZMMTg1LDEwOS42Yy00LjEsMC03LjQtMy4zLTcuNC03LjR2LTIzYzAtNC4xLDMuMy03LjQsNy40LTcuNGgwYzQuMSwwLDcuNCwzLjMsNy40LDcuNHYyMwoJCQkJCUMxOTIuNCwxMDYuMywxODkuMSwxMDkuNiwxODUsMTA5LjZ6Ii8+CgkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjM5LjIsMTA5LjZMMjM5LjIsMTA5LjZjLTQuMSwwLTcuNC0zLjMtNy40LTcuNHYtMjNjMC00LjEsMy4zLTcuNCw3LjQtNy40aDBjNC4xLDAsNy40LDMuMyw3LjQsNy40djIzCgkJCQkJQzI0Ni43LDEwNi4zLDI0My4zLDEwOS42LDIzOS4yLDEwOS42eiIvPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style=" font-size: 9.5px;">
+                    <span>  <b>Fecha:</b> </span>
+                </td>
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjU4LjcsMjc0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0yOC0yMi44LTUwLjktNTAuOS01MC45aC02Ny41Yy0yOCwwLTUwLjksMjIuOC01MC45LDUwLjlWMjcwCgkJCQljMCwyLjItMS44LDQtNCw0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0zMi41LDI2LjQtNTguOSw1OC45LTU4LjloNjcuNWMzMi41LDAsNTguOSwyNi40LDU4LjksNTguOVYyNzAKCQkJCUMyNjIuNywyNzIuMiwyNjAuOSwyNzQsMjU4LjcsMjc0eiIvPgoJCTwvZz4KCQk8Zz4KCQkJPGc+CgkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTE5LjMsMjc0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0yLjIsMS44LTQsNC00YzIuMiwwLDQsMS44LDQsNFYyNzBDMTIzLjQsMjcyLjIsMTIxLjYsMjc0LDExOS4zLDI3NHoiCgkJCQkJLz4KCQkJPC9nPgoJCQk8Zz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMjAuNywyNzRjLTIuMiwwLTQtMS44LTQtNHYtMjEuMWMwLTIuMiwxLjgtNCw0LTRzNCwxLjgsNCw0VjI3MEMyMjQuNywyNzIuMiwyMjIuOSwyNzQsMjIwLjcsMjc0eiIvPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNC40LDExOS4zYzI0LjEsMCw0OCwwLDcyLDBjLTAuNS03LjctMy4xLTE0LjUtNy45LTIwLjRjLTEuNi0xLjktMy41LTMuNi01LjMtNS40Yy0yLjEtMS45LTIuNC00LTAuOS01LjgKCQkJYzEuNS0xLjgsMy43LTEuOSw1LjktMC4xYzkuOCw4LjIsMTUuMSwxOC42LDE1LjgsMzEuNGMwLjEsMS42LDAuNiwyLjUsMiwzLjNjMy4yLDEuOCw1LjUsNC41LDcsNy44YzIuOSw2LjEtMC40LDExLjYtNy4yLDExLjkKCQkJYy0yLDAuMS0zLjksMC01LjksMGMxLjksMjYuNS0yMC42LDQzLTM5LjYsNDNjLTE5LjUtMC4xLTQxLjMtMTcuMS0zOS41LTQzYy0xLjksMC0zLjcsMC01LjYsMGMtNy4yLTAuMi0xMC44LTYtNy4yLTEyLjIKCQkJYzEuNi0yLjgsNC4xLTUuMiw2LjYtNy4zYzEuNC0xLjIsMi4xLTIuMiwyLjItNGMwLjgtMTIuNCw2LTIyLjUsMTUuNC0zMC42YzIuNi0yLjIsNC43LTIuMiw2LjQtMC4yYzEuNiwyLDEuMSw0LTEuNCw2LjEKCQkJQzEzOS40LDEwMC41LDEzNS4zLDEwOC45LDEzNC40LDExOS4zeiBNMTM5LjEsMTQyLjJjLTEuNiw5LjEsMi44LDIyLjIsMTMuNCwyOS40YzEwLjgsNy4zLDI0LjgsNy40LDM1LjYsMC4yCgkJCWMxMS4yLTcuNCwxNS40LTIwLjYsMTMuOC0yOS42QzE4MSwxNDIuMiwxNjAuMSwxNDIuMiwxMzkuMSwxNDIuMnogTTIxNi4xLDEzNC4xYy0xLjEtMy45LTQuOC02LjYtOS4xLTYuN2MtMTEuMiwwLTIyLjQsMC0zMy43LDAKCQkJYy0xMy4xLDAtMjYuMiwwLTM5LjQsMGMtNC4zLDAtOCwyLjgtOS4xLDYuN0MxNTUuMywxMzQuMSwxODUuNywxMzQuMSwyMTYuMSwxMzQuMXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTU3LjEsODguNmMwLTMuNS0wLjItNywwLTEwLjRjMC40LTYuOCw2LjItMTIsMTMuMi0xMmM3LjEsMCwxMy4xLDUuMSwxMy40LDEyYzAuMyw3LDAuMiwxNC4xLDAuMSwyMS4xCgkJCWMwLDIuNi0xLjYsNC4xLTQsNGMtMi4zLTAuMS0zLjctMS43LTMuNy00LjNjMC02LjIsMC0xMi41LDAtMTguN2MwLTMuOC0yLjQtNi41LTUuNy02LjVjLTMuNCwwLTUuNywyLjYtNS43LDYuNQoJCQljMCw2LjMsMCwxMi42LDAsMTljMCwyLTAuOSwzLjUtMyw0Yy0xLjgsMC40LTMuNC0wLjItNC4yLTEuOWMtMC40LTAuOC0wLjUtMS44LTAuNS0yLjdjLTAuMS0zLjMsMC02LjYsMC0xMAoJCQlDMTU3LDg4LjYsMTU3LjEsODguNiwxNTcuMSw4OC42eiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style="width: 150px; font-size: 9.5px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <b>Persona Responsable:</b></span>
+                    </div>
+                </td>
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yOTEuMiwxNzMuOWMtNSwxMi44LTEwLDI1LjctMTUuMiwzOC40Yy0wLjUsMS4zLTEuOCwyLjctMy4xLDMuMWMtMSwwLjQtMy4xLTAuMy0zLjYtMS4yCgkJYy0wLjctMS4xLTAuOS0zLjEtMC41LTQuM2MyLjUtNyw1LjItMTMuOSw3LjktMjAuOGMwLjMtMC43LDAuNS0xLjQsMC44LTIuMmMtNzEuOSwwLTE0My42LDAtMjE1LjYsMGMxLjYsNC4xLDMuMSw4LjEsNC42LDEyLjEKCQljMS40LDMuNiwyLjgsNy4yLDQuMSwxMC44YzEsMi42LDAuMiw0LjgtMS45LDUuNmMtMi4zLDAuOS00LjItMC4yLTUuMy0yLjljLTQuMS0xMC42LTguMi0yMS4yLTEyLjItMzEuOGMtMS4xLTIuOC0yLjUtNS42LTIuOC04LjQKCQljLTAuNy03LjQsMy4yLTEzLjIsMTAuNC0xNmM2LjctMi42LDEzLjctMi43LDIwLjgtMmMzLjcsMC40LDcsMS44LDkuMiw0LjdjMS40LDEuOSwyLjQsNC4yLDMsNi41YzEuMyw0LjQsMi4zLDksMy40LDEzLjQKCQljNDkuNywwLDk5LjIsMCwxNDguOSwwYzEuMS00LjMsMi43LTguNiwzLjItMTNjMC43LTUuMyw0LjktMTAuNCwxMS4xLTExLjRjNi44LTEuMiwxMy41LTAuOSwyMC4yLDFjNi4zLDEuOCwxMC40LDUuOSwxMi41LDEyCgkJQzI5Mi4yLDE2OS44LDI5MS43LDE3MS44LDI5MS4yLDE3My45eiBNMjUzLjQsMTc0LjdjLTAuMywxLjItMC43LDIuNy0xLjEsNC40YzgsMCwxNS42LDAuMiwyMy4zLTAuMWM1LjYtMC4yLDkuNS02LjIsNy40LTEwLjkKCQljLTEuMy0zLTMuOC00LjYtNi44LTVjLTUuMi0wLjctMTAuNS0wLjktMTUuNy0wLjljLTEuMywwLTIuOCwxLTMuOSwyYy0xLjUsMS4zLTEuMiwyLjYsMC43LDNjMy4xLDAuNyw2LjQsMS4xLDkuNiwxLjUKCQljMi42LDAuMyw0LjEsMS42LDQuMSw0Yy0wLjEsMi4zLTEuNiwzLjktNC4zLDMuNkMyNjIuMywxNzUuOSwyNTguMSwxNzUuMywyNTMuNCwxNzQuN3ogTTg2LjIsMTc0LjdjLTQuNiwwLjUtOS4xLDEuMi0xMy41LDEuNQoJCWMtMi40LDAuMi00LTEuNC00LTMuN2MwLTIuMiwxLjQtMy43LDMuOC0zLjljMi43LTAuMyw1LjUtMC41LDguMi0xYzEuMS0wLjIsMi4xLTEuMSwzLjItMS43Yy0wLjktMS4xLTEuOC0yLjMtMi44LTMuMgoJCWMtMC41LTAuNS0xLjUtMC43LTIuMi0wLjdjLTQuNiwwLjEtOS4xLDAuMi0xMy43LDAuNWMtMS4xLDAuMS0yLjMsMC42LTMuNCwxYy00LDEuNi02LjMsNC45LTUuNyw4LjNjMC43LDQsNC40LDcuMiw4LjcsNy4zCgkJYzcsMC4xLDE0LjEsMCwyMS4xLDBjMC40LDAsMC45LTAuMSwxLjUtMC4yQzg2LjgsMTc3LjMsODYuNCwxNzUuOCw4Ni4yLDE3NC43eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzMy43LDEwNWMyNC4xLDAsNDgsMCw3MiwwYy0wLjUtNy43LTMuMS0xNC41LTcuOS0yMC40Yy0xLjYtMS45LTMuNS0zLjYtNS4zLTUuNGMtMi4xLTEuOS0yLjQtNC0wLjktNS44CgkJYzEuNS0xLjgsMy43LTEuOSw1LjktMC4xYzkuOCw4LjIsMTUuMSwxOC42LDE1LjgsMzEuNGMwLjEsMS42LDAuNiwyLjUsMiwzLjNjMy4yLDEuOCw1LjUsNC41LDcsNy44YzIuOSw2LjEtMC40LDExLjYtNy4yLDExLjkKCQljLTIsMC4xLTMuOSwwLTUuOSwwYzEuOSwyNi41LTIwLjYsNDMtMzkuNiw0M2MtMTkuNS0wLjEtNDEuMy0xNy4xLTM5LjUtNDNjLTEuOSwwLTMuNywwLTUuNiwwYy03LjItMC4yLTEwLjgtNi03LjItMTIuMgoJCWMxLjYtMi44LDQuMS01LjIsNi42LTcuM2MxLjQtMS4yLDIuMS0yLjIsMi4yLTRjMC44LTEyLjQsNi0yMi41LDE1LjQtMzAuNmMyLjYtMi4yLDQuNy0yLjIsNi40LTAuMmMxLjYsMiwxLjEsNC0xLjQsNi4xCgkJQzEzOC43LDg2LjIsMTM0LjYsOTQuNywxMzMuNywxMDV6IE0xMzguNCwxMjhjLTEuNiw5LjEsMi44LDIyLjIsMTMuNCwyOS40YzEwLjgsNy4zLDI0LjgsNy40LDM1LjYsMC4yCgkJYzExLjItNy40LDE1LjQtMjAuNiwxMy44LTI5LjZDMTgwLjMsMTI4LDE1OS40LDEyOCwxMzguNCwxMjh6IE0yMTUuNCwxMTkuOGMtMS4xLTMuOS00LjgtNi42LTkuMS02LjdjLTExLjIsMC0yMi40LDAtMzMuNywwCgkJYy0xMy4xLDAtMjYuMiwwLTM5LjQsMGMtNC4zLDAtOCwyLjgtOS4xLDYuN0MxNTQuNiwxMTkuOCwxODUsMTE5LjgsMjE1LjQsMTE5Ljh6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTY5LjgsMjg4LjJjLTIxLjMsMC00Mi41LDAtNjMuOCwwYy04LjcsMC0xNS41LTQuOS0xOC41LTEyLjljLTEtMi44LTAuNC00LjksMS44LTUuOAoJCWMyLjItMC45LDQuMiwwLjIsNS4zLDIuOWMyLjMsNS43LDYuMSw4LjMsMTIuMiw4LjNjNDEuOSwwLDgzLjgsMCwxMjUuNiwwYzYuMSwwLDkuOS0yLjYsMTIuMy04LjJjMS4xLTIuNywzLjEtMy44LDUuMy0zCgkJYzIuMiwwLjksMi45LDMuMSwxLjksNS44Yy0zLDgtOS45LDEzLTE4LjUsMTNDMjEyLjMsMjg4LjMsMTkxLjEsMjg4LjIsMTY5LjgsMjg4LjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTEzLjgsMjQwLjljLTAuNywzLjItMS4xLDcuMy0yLjQsMTEuMmMtMi42LDgtOS45LDEzLjEtMTguMywxMy4zYy0xNi42LDAuNS0yNy45LTguMi0zMi4zLTI1LjEKCQljLTAuOC0zLjItMS40LTYuNS0xLjUtOS44Yy0wLjMtNi41LDUuNC0xMi4yLDExLjgtMTEuM2M2LjYsMC45LDEyLjctMC43LDE4LjktMS45YzIuNi0wLjUsNS4zLTAuOSw4LTAuOWM3LjksMCwxMi43LDQuNCwxNC4zLDEzLjEKCQlDMTEyLjksMjMzLDExMy4yLDIzNi41LDExMy44LDI0MC45eiBNMTA2LDIzOS44Yy0wLjQtMi45LTAuOC02LjItMS41LTkuNWMtMS4yLTUuMi0yLjktNi4zLTguMi02LjFjLTAuNiwwLTEuMywwLjEtMS45LDAuMgoJCWMtNy44LDEuMi0xNS40LDQtMjMuNiwyLjZjLTIuNi0wLjUtNC4zLDEuNy0zLjksNC4zYzAuNSwyLjksMSw1LjksMS45LDguOGMzLjEsOS45LDkuMSwxNi43LDIwLjIsMTcuNWM4LjksMC43LDE0LjMtMi43LDE2LjItMTEuMwoJCUMxMDUuNSwyNDQuNCwxMDUuNiwyNDIuMywxMDYsMjM5Ljh6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjUzLjQsMjY1LjRjLTE3LjcsMC0yNi4zLTguMS0yNy4yLTIxLjJjLTAuNC01LjUsMC0xMSwxLjQtMTYuNGMyLjEtOC4xLDcuNS0xMi4yLDE1LjgtMTEuMwoJCWM0LjksMC41LDkuOCwxLjgsMTQuNywyLjVjMi43LDAuNCw1LjUsMC42LDguMiwwLjNjOS0wLjgsMTQuNyw0LjMsMTMuOCwxMy4xYy0wLjcsNy43LTMsMTUtNy43LDIxLjMKCQlDMjY2LjcsMjYxLjgsMjU4LjYsMjY1LjQsMjUzLjQsMjY1LjR6IE0yMzMuNiwyMzkuM2MwLjMsMi42LDAuNCw0LjYsMC43LDYuNWMxLjEsNS41LDMuNiw5LjgsOS40LDExLjNjNy44LDEuOSwxNy43LTAuNCwyMy04LjQKCQljMy4zLTQuOSw0LjktMTAuMyw1LjctMTYuMWMwLjYtNC4zLTEtNS45LTUuMy01LjZjLTMuNSwwLjItNy4xLDAuMS0xMC42LTAuNGMtNC44LTAuNi05LjYtMS45LTE0LjQtMi40Yy00LTAuNC01LjksMS4xLTYuOCw1CgkJQzIzNC41LDIzMi44LDIzNC4xLDIzNi40LDIzMy42LDIzOS4zeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1Ni40LDc0LjRjMC0zLjUtMC4yLTcsMC0xMC40YzAuNC02LjgsNi4yLTEyLDEzLjItMTJjNy4xLDAsMTMuMSw1LjEsMTMuNCwxMmMwLjMsNywwLjIsMTQuMSwwLjEsMjEuMQoJCWMwLDIuNi0xLjYsNC4xLTQsNGMtMi4zLTAuMS0zLjctMS43LTMuNy00LjNjMC02LjIsMC0xMi41LDAtMTguN2MwLTMuOC0yLjQtNi41LTUuNy02LjVjLTMuNCwwLTUuNywyLjYtNS43LDYuNWMwLDYuMywwLDEyLjYsMCwxOQoJCWMwLDItMC45LDMuNS0zLDRjLTEuOCwwLjQtMy40LTAuMi00LjItMS45Yy0wLjQtMC44LTAuNS0xLjgtMC41LTIuN2MtMC4xLTMuMywwLTYuNiwwLTEwQzE1Ni40LDc0LjQsMTU2LjQsNzQuNCwxNTYuNCw3NC40eiIvPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style="width: 150px; font-size: 9.5px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <b>Residente de Obra:</b></span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr style="border: 1px solid black;">
+
+                <td style=" font-size: 10px;">
+                    <span>  Fecha: </span>
+                </td>
+
+                <td style="width: 150px; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <%= q119_nombreDel.first %>  <%= q119_nombreDel.last %> </span>
+                    </div>
+                </td>
+
+                <td style="width: 150px; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span>  <%= personResponsible %></span>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div style="font-size: 9px; ">
+        <table style="width: 500px;">
+            <tr style=" border: 1px solid #58585A">
+                <td class="borderR" style="color:white;font-size: 10px; width: 100px">
+                    <h3>PERSONAL EN OBRA:</h3>
+                </td>
+
+            </tr>
+            <tr style=" border: 1px solid #58585A">
+                <td style="color: #939598;font-size: 9.5px;border: 1px solid #58585A">
+                    <h3><b>Función:</b></h3>
+                </td>
+                <td class="" style="color: #939598; font-size: 9.5px;border: 1px solid #58585A">
+                    <h3><b>Cantidad:</b></h3>
+                </td>
+                <td class="" style="color: #939598; font-size: 9.5px;border: 1px solid #58585A">
+                    <h3><b>Observaciones:</b></h3>
+                </td>
+            </tr>
+            <tr style=" border: 1px solid #58585A">
+                <td class="" style="border: 1px solid #58585A;font-size: 9px;">
+                    <h3>MAESTRO MAYOR:</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3> <%= q90_escribaUna90[0][0] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; width: 50px">
+                    <h3 style="padding:2px  "> <%= q90_escribaUna90[0][1] %></h3>
+                </td>
+            </tr>
+            <tr style=" border: 1px solid #58585A">
+                <td class="" style="border: 1px solid #58585A;font-size: 9px;">
+
+                    <h3>ALBAÑILES:</h3>
+                </td>
+                <td class="" style="border: 1px solid #58585A; font-size: 9px; width: 50px">
+                    <h3><%= q90_escribaUna90[1][0] %></h3>
+                </td>
+                <td class="" style="border: 1px solid #58585A; font-size: 9px; width: 50px">
+                    <h3><%= q90_escribaUna90[1][1] %></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="border: 1px solid #58585A;font-size: 9px;">
+
+                    <h3>OFICIALES:</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A; font-size: 9px; width: 50px">
+                    <h3><%= q90_escribaUna90[2][0] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A; font-size: 9px; width: 50px">
+                    <h3><%= q90_escribaUna90[2][1] %></h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="font-size: 9px; ">
+        <table style="width: 500px;">
+            <tr style=" border: 1px solid #58585A">
+                <td class="borderR" style="color:white;font-size: 10px; width: 100px">
+                    <h3>SECCIÓN #: <%= q9_escribaUna9 %></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td style=" font-size: 9px;">
+                    <% if (q9_escribaUna9.includes('Losa de Cimentación') === true) { %>
+                        <table>
+                            <tr style=" color: #939598;font-size: 9.5px;border: 1px solid #58585A">
+                                <td class="" style=" color: #939598;font-size: 9.5px;border: 1px solid #58585A;">
+                                    <h3>Punto de Control</h3>
+                                </td>
+                                <td class=""
+                                    style=" color: #939598;font-size: 9.5px;border: 1px solid #58585A; width: 100px">
+                                    <h3>Ejecutado</h3>
+                                </td>
+                                <td class=""
+                                    style="color: #939598;font-size: 9.5px;border: 1px solid #58585A; width: 100px">
+                                    <h3>Por Ejecutar</h3>
+                                </td>
+                                <td class=""
+                                    style="color: #939598;font-size: 9.5px;border: 1px solid #58585A; width: 100px">
+                                    <h3>Observaciones</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Conformación de plataforma</h3>
+                                </td>
+                                <td class="" style="border: 1px solid #58585A; font-size: 9px; width: 50px">
+                                    <% if (q58_input72[0]["0"]) { %>
+                                        <% if (q58_input72[0]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[0]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[0]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[0]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="border: 1px solid #58585A; font-size: 9px; width: 50px">
+                                    <% if (q58_input72[0]["1"]) { %>
+                                        <% if (q58_input72[0]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[0]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[0]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[0]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="border: 1px solid #58585A; font-size: 9px; width: 50px">
+                                    <% if (q58_input72[0]["2"]) { %>
+                                        <% if (q58_input72[0]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[0]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[0]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[0]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="font-size: 9.5px;border: 1px solid #58585A">
+
+                                    <h3> Replanteo y Nivelación</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[1]["0"]) { %>
+                                        <% if (q58_input72[1]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[1]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[1]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[1]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[1]["1"]) { %>
+                                        <% if (q58_input72[1]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[1]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[1]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[1]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[1]["2"]) { %>
+                                        <% if (q58_input72[1]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[1]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[1]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[1]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Excavación de cadenas</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[2]["0"]) { %>
+                                        <% if (q58_input72[2]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[2]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[2]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[2]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[2]["1"]) { %>
+                                        <% if (q58_input72[2]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[2]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[2]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[2]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[2]["2"]) { %>
+                                        <% if (q58_input72[2]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[2]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[2]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[2]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Armado Acero de Refuerzo cadenas</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[3]["0"]) { %>
+                                        <% if (q58_input72[3]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[3]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[3]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[3]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[3]["1"]) { %>
+                                        <% if (q58_input72[3]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[3]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[3]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[3]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[3]["2"]) { %>
+                                        <% if (q58_input72[3]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[0]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[3]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[3]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Montaje de Instalaciones Hidrosanitarias</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[4]["0"]) { %>
+                                        <% if (q58_input72[4]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[4]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[4]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[4]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[4]["1"]) { %>
+                                        <% if (q58_input72[4]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[4]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[4]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[4]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[4]["2"]) { %>
+                                        <% if (q58_input72[4]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[4]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[4]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[4]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3> Montaje de Instalaciones Eléctricas</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[5]["0"]) { %>
+                                        <% if (q58_input72[5]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[5]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[5]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[5]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[5]["1"]) { %>
+                                        <% if (q58_input72[5]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[5]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[5]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[5]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[5]["2"]) { %>
+                                        <% if (q58_input72[5]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[5]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[5]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[5]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Colocación de Plástico Polietileno</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[6]["0"]) { %>
+                                        <% if (q58_input72[6]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[6]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[6]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[6]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[6]["1"]) { %>
+                                        <% if (q58_input72[6]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[6]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[6]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[6]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[6]["2"]) { %>
+                                        <% if (q58_input72[6]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[6]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[6]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[6]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Colocación de Malla Electrosoldada</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[7]["0"]) { %>
+                                        <% if (q58_input72[7]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[7]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[7]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[7]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[7]["1"]) { %>
+                                        <% if (q58_input72[7]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[7]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[7]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[7]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[7]["2"]) { %>
+                                        <% if (q58_input72[7]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[7]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[7]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[7]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Armado de varilla vertical</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[8]["0"]) { %>
+                                        <% if (q58_input72[8]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[8]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[8]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[8]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[8]["1"]) { %>
+                                        <% if (q58_input72[8]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[8]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[8]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[8]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[8]["2"]) { %>
+                                        <% if (q58_input72[8]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[8]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[8]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[8]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Hormigonado de losa de cimentación</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[9]["0"]) { %>
+                                        <% if (q58_input72[9]["0"].length > 1 ) { %>
+                                            <h3><%= q58_input72[9]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[9]["0"].length < 1) { %>
+                                            <h3><%= q58_input72[9]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[9]["1"]) { %>
+                                        <% if (q58_input72[9]["1"].length > 1 ) { %>
+                                            <h3><%= q58_input72[9]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[9]["1"].length < 1) { %>
+                                            <h3><%= q58_input72[9]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q58_input72[9]["2"]) { %>
+                                        <% if (q58_input72[9]["2"].length > 1 ) { %>
+                                            <h3><%= q58_input72[9]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q58_input72[9]["2"].length < 1) { %>
+                                            <h3><%= q58_input72[9]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+
+                        </table>
+                    <% } %>
+
+                    <% if (q9_escribaUna9.includes('Muros Estructurales') === true) { %>
+                        <table>
+                            <tr style="background: #24415e ;color: white;font-size: 9px;border: 1px solid #000000;  border-radius: 129px">
+                                <td class="border">
+
+                                    <h3></h3>
+                                </td>
+                                <td class="border1" style=" 
+border: 1px solid #58585A;font-size: 9px;">
+                                    <h3>Ejecutado</h3>
+                                </td>
+                                <td class="" style="font-size: 9px; border: 1px solid #58585A;width: 50px">
+                                    <h3>Por Ejecutar</h3>
+                                </td>
+                                <td class="border2" style="border: 1px solid #58585A;font-size: 9px; width: 50px">
+                                    <h3>Observaciones</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Curado de Hormigón de Losa</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[0]["0"]) { %>
+                                        <% if (q94_input94[0]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[0]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[0]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[0]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[0]["1"]) { %>
+                                        <% if (q94_input94[0]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[0]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[0]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[0]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[0]["2"]) { %>
+                                        <% if (q94_input94[0]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[0]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[0]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[0]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3> Cumplimiento al Plano de Distribución de Pallets en Obra</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[1]["0"]) { %>
+                                        <% if (q94_input94[1]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[1]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[1]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[1]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[1]["1"]) { %>
+                                        <% if (q94_input94[1]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[1]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[1]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[1]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[1]["2"]) { %>
+                                        <% if (q94_input94[1]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[1]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[1]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[1]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Cumplimiento del Ciclo de Construcción Eficiente</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[2]["0"]) { %>
+                                        <% if (q94_input94[2]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[2]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[2]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[2]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[2]["1"]) { %>
+                                        <% if (q94_input94[2]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[2]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[2]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[2]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[2]["2"]) { %>
+                                        <% if (q94_input94[2]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[2]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[2]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[2]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Niveles referenciales, Plomadas y Nivelación de Muros</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[3]["0"]) { %>
+                                        <% if (q94_input94[3]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[3]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[3]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[3]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[3]["1"]) { %>
+                                        <% if (q94_input94[3]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[3]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[3]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[3]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[3]["2"]) { %>
+                                        <% if (q94_input94[3]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[3]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[3]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[3]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Sistema de Andamiaje</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[4]["0"]) { %>
+                                        <% if (q94_input94[4]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[4]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[4]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[4]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[4]["1"]) { %>
+                                        <% if (q94_input94[4]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[4]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[4]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[4]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[4]["2"]) { %>
+                                        <% if (q94_input94[4]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[4]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[4]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[4]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3> Remate a 90° de varilla horizontal</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[5]["0"]) { %>
+                                        <% if (q94_input94[5]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[5]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[5]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[5]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[5]["1"]) { %>
+                                        <% if (q94_input94[5]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[5]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[5]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[5]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[5]["2"]) { %>
+                                        <% if (q94_input94[5]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[5]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[5]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[5]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Conducciones Eléctricas e Hidrosanitarias dentro de muros</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[6]["0"]) { %>
+                                        <% if (q94_input94[6]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[6]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[6]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[6]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[6]["1"]) { %>
+                                        <% if (q94_input94[6]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[6]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[6]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[6]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[6]["2"]) { %>
+                                        <% if (q94_input94[6]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[6]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[6]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[6]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Cumplimiento de trabe de mampostería</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[7]["0"]) { %>
+                                        <% if (q94_input94[7]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[7]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[7]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[7]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[7]["1"]) { %>
+                                        <% if (q94_input94[7]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[7]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[7]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[7]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[7]["2"]) { %>
+                                        <% if (q94_input94[7]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[7]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[7]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[7]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Dinteles de puertas y ventanas</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[8]["0"]) { %>
+                                        <% if (q94_input94[8]["0"].length > 1 ) { %>
+                                            <h3><%= q94_input94[8]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[8]["0"].length < 1) { %>
+                                            <h3><%= q94_input94[8]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[8]["1"]) { %>
+                                        <% if (q94_input94[8]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[8]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[8]["1"].length < 1) { %>
+                                            <h3><%= q94_input94[8]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[8]["2"]) { %>
+                                        <% if (q94_input94[8]["2"].length > 1 ) { %>
+                                            <h3><%= q94_input94[8]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[8]["2"].length < 1) { %>
+                                            <h3><%= q94_input94[8]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+
+
+                        </table>
+                    <% } %>
+
+                    <% if (q9_escribaUna9.includes('Losa de Entrepiso') === true) { %>
+                        <table>
+                            <tr style="background: #24415e ;color: white;font-size: 9px;border: 1px solid #000000;  border-radius: 129px">
+                                <td class="border">
+
+                                    <h3></h3>
+                                </td>
+                                <td class="border1" style="
+border: 1px solid #58585A;font-size: 9px;">
+                                    <h3>Ejecutado</h3>
+                                </td>
+                                <td class="" style="font-size: 9px; width: 50px">
+                                    <h3>Por Ejecutar</h3>
+                                </td>
+                                <td class="border2" style="font-size: 9px; width: 50px">
+                                    <h3>Observaciones</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border-bottom: 1px solid #000000;font-size: 9px;">
+
+                                    <h3>Revisión de Sistema de Encofrado</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[0]["0"]) { %>
+                                        <% if (q95_input95[0]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[0]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[0]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[0]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[0]["1"]) { %>
+                                        <% if (q95_input95[0]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[0]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[0]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[0]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[0]["2"]) { %>
+                                        <% if (q95_input95[0]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[0]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[0]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[0]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3> Doblado de Varilla Vertical en Losa</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[1]["0"]) { %>
+                                        <% if (q94_input94[1]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[1]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[1]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[1]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[1]["1"]) { %>
+                                        <% if (q95_input95[1]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[1]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[1]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[1]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[1]["2"]) { %>
+                                        <% if (q95_input95[1]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[1]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[1]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[1]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Malla Electro soldada inferior del tablero de encofrado: 3cm</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[2]["0"]) { %>
+                                        <% if (q94_input94[2]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[2]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[2]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[2]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[2]["1"]) { %>
+                                        <% if (q95_input95[2]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[2]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[2]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[2]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[2]["2"]) { %>
+                                        <% if (q95_input95[2]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[2]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[2]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[2]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Malla Electro soldada inferior del tablero de encofrado: 3cm</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[3]["0"]) { %>
+                                        <% if (q95_input95[3]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[3]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[3]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[3]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[3]["1"]) { %>
+                                        <% if (q95_input95[3]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[3]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[3]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[3]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[3]["2"]) { %>
+                                        <% if (q95_input95[3]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[3]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[3]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[3]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Traslape de Malla Electro soldada: 2 cuadros</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[4]["0"]) { %>
+                                        <% if (q95_input95[4]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[4]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[4]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[4]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q94_input94[4]["1"]) { %>
+                                        <% if (q94_input94[4]["1"].length > 1 ) { %>
+                                            <h3><%= q94_input94[4]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q94_input94[4]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[4]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[4]["2"]) { %>
+                                        <% if (q95_input95[4]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[4]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[4]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[4]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3> Colocación de Acero de Refuerzo Vertical a múltiplo de 12,5 cm</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[5]["0"]) { %>
+                                        <% if (q95_input95[5]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[5]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[5]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[5]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[5]["1"]) { %>
+                                        <% if (q95_input95[5]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[5]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[5]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[5]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[5]["2"]) { %>
+                                        <% if (q95_input95[5]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[5]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[5]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[5]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Revisión de Alineación de Conducciones Hidrosanitarias y Eléctricas</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[6]["0"]) { %>
+                                        <% if (q95_input95[6]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[6]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[0]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[6]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[6]["1"]) { %>
+                                        <% if (q95_input95[6]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[6]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[6]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[6]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[6]["2"]) { %>
+                                        <% if (q95_input95[6]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[6]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[6]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[6]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+
+                                    <h3>Hormigonado, Nivelación, Paleteado y Correcta resistencia a la Compresión</h3>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[7]["0"]) { %>
+                                        <% if (q95_input95[7]["0"].length > 1 ) { %>
+                                            <h3><%= q95_input95[7]["0"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[7]["0"].length < 1) { %>
+                                            <h3><%= q95_input95[7]["0"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[7]["1"]) { %>
+                                        <% if (q95_input95[7]["1"].length > 1 ) { %>
+                                            <h3><%= q95_input95[7]["1"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[7]["1"].length < 1) { %>
+                                            <h3><%= q95_input95[7]["1"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                                <td class="" style="
+font-size: 9.5px;border: 1px solid #58585A; width: 50px">
+                                    <% if (q95_input95[7]["2"]) { %>
+                                        <% if (q95_input95[7]["2"].length > 1 ) { %>
+                                            <h3><%= q95_input95[7]["2"] %></h3>
+                                        <% } %>
+                                        <% if (q95_input95[7]["2"].length < 1) { %>
+                                            <h3><%= q95_input95[7]["2"] %></h3>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+
+                            </tr>
+
+
+                        </table>
+                    <% } %>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="font-size: 9px">
+        <table style="">
+            <tr>
+                <td style="font-size: 9px;">
+
+
+                    <div style="width: 250px">
+                        <table>
+                            <tr>
+                                <td class="borderR" style="color:white;font-size: 9px;border: 1px solid #000000;">
+
+                                    <h3>SEGUIMIENTO DE OBSERVACIONES
+                                        INFORME ANTERIOR</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="" style="border: 1px solid #000000
+;font-size: 9px;">
+
+                                    <h3><%= q116_seguimientoDe %> </h3>
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+                </td>
+                <td style=" font-size: 9px;">
+                    <div style="width: 250px">
+                        <table>
+                            <tr>
+
+                                <td class="borderR" style="color:white;border: 1px solid #000000;  ">
+
+                                    <h3>OBSERVACIONES Y RECOMENDACIONES
+                                        CONSTRUCTIVAS Y ESTRUCTURALES</h3>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="border" style="border: 1px solid #000000;
+font-size: 9px;">
+
+                                    <h3><%= q118_observacionesY118 %> </h3>
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+    <div style="font-size: 9px;">
+        <table style="width: 100%;">
+            <tr>
+                <td class="borderR" colspan="7"
+                    style="color: white;font-size: 9px;">
+                    <h3>EVALUACIONES GENERALES:</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="border" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>CONCEPTO / CALIFICACIÓN</h3>
+                </td>
+                <td class="" style="border: 1px solid #58585A; font-size: 9px;">
+                    <h3>1</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">2</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">3</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">4</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">5</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">Observaciones</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>EQUIPO DE PROTECCIÓN PERSONAL</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <% if (q125_estadoDe[0]["0"] === "1") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[0]["1"] === "2") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[0]["2"] === "3") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[0]["3"] === "4") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[0]["4"] === "5") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px "></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>CUMPLIMIENTO DE CCE</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <% if (q125_estadoDe[1]["0"] === "1") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[1]["1"] === "2") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[1]["2"] === "3") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[1]["3"] === "4") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[1]["4"] === "5") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px "></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>HERRAMIENTAS BASICAS</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <% if (q125_estadoDe[2]["0"] === "1") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[2]["1"] === "2") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[2]["2"] === "3") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[2]["3"] === "4") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style="border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[2]["4"] === "5") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3 style="padding: 5px "></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>LIMPIEZA</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <% if (q125_estadoDe[3]["0"] === "1") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[3]["1"] === "2") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[3]["2"] === "3") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[3]["3"] === "4") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q125_estadoDe[3]["4"] === "5") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px "></h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>ORDEN</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;width: 20px;font-size: 9px;">
+                    <% if (q125_estadoDe[4]["0"] === "1") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;width: 20px;font-size: 9px; ">
+                    <% if (q125_estadoDe[4]["1"] === "2") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;width: 20px ">
+                    <% if (q125_estadoDe[4]["2"] === "3") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;width: 20px ">
+                    <% if (q125_estadoDe[4]["3"] === "4") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; width: 20px">
+                    <% if (q125_estadoDe[4]["4"] === "5") { %>
+                        <h3>x</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px "></h3>
+                </td>
+            </tr>
+        </table>
+
+        <p style="padding-left: 100px">* Se considera 1 como la calificación mas baja y 5 como la calificación mas
+            alta.</p>
+    </div>
+    <div style="font-size: 9px; ">
+        <table style="width: 100%">
+            <tr>
+                <td class="borderR" colspan="7"
+                    style="color: white;font-size: 9px;">
+                    <h3>CUMPLIMIENTO DE CRONOGRAMA:</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>CRONOGRAMA </h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3>PORCENTAJE </h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">AVANCE </h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;  " colspan="5">
+                    <h3 style="padding: 5px ">CALIFICACIÓN DE CUMPLIMIENTO </h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <h3 style="padding: 5px ">OBSERVACIONES</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>Sección</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3><%= q131_cumplimientoDe[0]["0"] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3><%= q131_cumplimientoDe[0]["1"] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["2"]) { %>
+                        <h3 style="color: #09a837">1</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["2"]) { %>
+                        <h3>1</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["3"]) { %>
+                        <h3 style="color: #09a837">2</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["3"]) { %>
+                        <h3>2</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["4"]) { %>
+                        <h3 style="color: #09a837">3</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["4"]) { %>
+                        <h3>3</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["5"]) { %>
+                        <h3 style="color: #09a837">4</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["5"]) { %>
+                        <h3>4</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["6"]) { %>
+                        <h3 style="color: #09a837">5</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["6"]) { %>
+                        <h3>5</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <%= q131_cumplimientoDe[0]["7"] %>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="" style="
+border: 1px solid #58585A;font-size: 9px;">
+                    <h3>General</h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3><%= q131_cumplimientoDe[1]["0"] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px;">
+                    <h3><%= q131_cumplimientoDe[1]["1"] %></h3>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[1]["2"]) { %>
+                        <h3 style="color: #09a837">1</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[1]["2"]) { %>
+                        <h3>1</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[1]["3"]) { %>
+                        <h3 style="color: #09a837">2</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[1]["3"]) { %>
+                        <h3>2</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[1]["4"]) { %>
+                        <h3 style="color: #09a837">3</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[1]["4"]) { %>
+                        <h3>3</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[1]["5"]) { %>
+                        <h3 style="color: #09a837">4</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[1]["5"]) { %>
+                        <h3>4</h3>
+                    <% } %>
+
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <% if (q131_cumplimientoDe[0]["6"]) { %>
+                        <h3 style="color: #09a837">5</h3>
+                    <% } %>
+                    <% if (!q131_cumplimientoDe[0]["6"]) { %>
+                        <h3>5</h3>
+                    <% } %>
+                </td>
+                <td class="" style=" border: 1px solid #58585A;font-size: 9px; ">
+                    <%= q131_cumplimientoDe[1]["7"] %>
+                </td>
+
+            </tr>
+
+
+        </table>
+
+
+    </div>
+    <img src="data:image/png;base64,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"
+       style="width: 100%" alt="Test">
+</div>
+<br>
+
+<br>
+
+<div class="font-family" style=" margin: 16px ">
+    <div>
+        <table style="margin-top: 20px">
+            <tr>
+                <td>
+                    <h3 style=" ; font-size: 20px; width: 350px"><b>Informe de Visita de Obra
+                            # <%= q137_idUnico %></b></h3>
+                </td>
+                <td>
+                    <div class="" style="text-align: right;">
+                        <img src="data:image/png;base64,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"
+                             alt="manager">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="font-size: 9px">
+        <table style="border: 1px solid black; padding: 2px; width: 100%; ">
+            <tr style="border: 1px solid black;">
+                <td style="width: 100px; font-size: 8px;">
+                    <h3></h3>
+                </td>
+                <td style="border-left: 1px solid black; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <h3><b>Proyecto: </b> <%= name %></h3>
+                    </div>
+                </td>
+                <td style="border-left: 1px solid black; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <h3><b>Módulo #: </b> <%= module %></h3>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="font-size: 9px;">
+        <table>
+            <tr style="border: 1px solid black;">
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxnPgoJCQk8Zz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yODYuOCwyNjguNEg3Ni42Vjg2aDIxMC4zVjI2OC40eiBNODQuNiwyNjAuM2gxOTQuMlY5NC4xSDg0LjZWMjYwLjN6Ii8+CgkJCTwvZz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQk8cG9seWdvbiBjbGFzcz0ic3QxIiBwb2ludHM9IjI0Mi40LDIzOS44IDQzLjUsMjM5LjggODEsMTM2LjEgMjgwLDEzNi4xIAkJCQkJIi8+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjQ1LjMsMjQzLjhIMzcuOEw3OC4yLDEzMmgyMDcuNUwyNDUuMywyNDMuOHogTTQ5LjIsMjM1LjhoMTkwLjRsMzQuNi05NS43SDgzLjlMNDkuMiwyMzUuOHoiLz4KCQkJCTwvZz4KCQkJPC9nPgoJCTwvZz4KCQk8Zz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTI0LjEsMTA5LjZMMTI0LjEsMTA5LjZjLTQuMSwwLTcuNC0zLjMtNy40LTcuNHYtMjNjMC00LjEsMy4zLTcuNCw3LjQtNy40aDBjNC4xLDAsNy40LDMuMyw3LjQsNy40djIzCgkJCQkJCUMxMzEuNiwxMDYuMywxMjguMiwxMDkuNiwxMjQuMSwxMDkuNnoiLz4KCQkJCTwvZz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xODUsMTA5LjZMMTg1LDEwOS42Yy00LjEsMC03LjQtMy4zLTcuNC03LjR2LTIzYzAtNC4xLDMuMy03LjQsNy40LTcuNGgwYzQuMSwwLDcuNCwzLjMsNy40LDcuNHYyMwoJCQkJCUMxOTIuNCwxMDYuMywxODkuMSwxMDkuNiwxODUsMTA5LjZ6Ii8+CgkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjM5LjIsMTA5LjZMMjM5LjIsMTA5LjZjLTQuMSwwLTcuNC0zLjMtNy40LTcuNHYtMjNjMC00LjEsMy4zLTcuNCw3LjQtNy40aDBjNC4xLDAsNy40LDMuMyw3LjQsNy40djIzCgkJCQkJQzI0Ni43LDEwNi4zLDI0My4zLDEwOS42LDIzOS4yLDEwOS42eiIvPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style=" font-size: 9.5px;">
+                    <span>  <b>Fecha:</b> </span>
+                </td>
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjU4LjcsMjc0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0yOC0yMi44LTUwLjktNTAuOS01MC45aC02Ny41Yy0yOCwwLTUwLjksMjIuOC01MC45LDUwLjlWMjcwCgkJCQljMCwyLjItMS44LDQtNCw0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0zMi41LDI2LjQtNTguOSw1OC45LTU4LjloNjcuNWMzMi41LDAsNTguOSwyNi40LDU4LjksNTguOVYyNzAKCQkJCUMyNjIuNywyNzIuMiwyNjAuOSwyNzQsMjU4LjcsMjc0eiIvPgoJCTwvZz4KCQk8Zz4KCQkJPGc+CgkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTE5LjMsMjc0Yy0yLjIsMC00LTEuOC00LTR2LTIxLjFjMC0yLjIsMS44LTQsNC00YzIuMiwwLDQsMS44LDQsNFYyNzBDMTIzLjQsMjcyLjIsMTIxLjYsMjc0LDExOS4zLDI3NHoiCgkJCQkJLz4KCQkJPC9nPgoJCQk8Zz4KCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMjAuNywyNzRjLTIuMiwwLTQtMS44LTQtNHYtMjEuMWMwLTIuMiwxLjgtNCw0LTRzNCwxLjgsNCw0VjI3MEMyMjQuNywyNzIuMiwyMjIuOSwyNzQsMjIwLjcsMjc0eiIvPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNC40LDExOS4zYzI0LjEsMCw0OCwwLDcyLDBjLTAuNS03LjctMy4xLTE0LjUtNy45LTIwLjRjLTEuNi0xLjktMy41LTMuNi01LjMtNS40Yy0yLjEtMS45LTIuNC00LTAuOS01LjgKCQkJYzEuNS0xLjgsMy43LTEuOSw1LjktMC4xYzkuOCw4LjIsMTUuMSwxOC42LDE1LjgsMzEuNGMwLjEsMS42LDAuNiwyLjUsMiwzLjNjMy4yLDEuOCw1LjUsNC41LDcsNy44YzIuOSw2LjEtMC40LDExLjYtNy4yLDExLjkKCQkJYy0yLDAuMS0zLjksMC01LjksMGMxLjksMjYuNS0yMC42LDQzLTM5LjYsNDNjLTE5LjUtMC4xLTQxLjMtMTcuMS0zOS41LTQzYy0xLjksMC0zLjcsMC01LjYsMGMtNy4yLTAuMi0xMC44LTYtNy4yLTEyLjIKCQkJYzEuNi0yLjgsNC4xLTUuMiw2LjYtNy4zYzEuNC0xLjIsMi4xLTIuMiwyLjItNGMwLjgtMTIuNCw2LTIyLjUsMTUuNC0zMC42YzIuNi0yLjIsNC43LTIuMiw2LjQtMC4yYzEuNiwyLDEuMSw0LTEuNCw2LjEKCQkJQzEzOS40LDEwMC41LDEzNS4zLDEwOC45LDEzNC40LDExOS4zeiBNMTM5LjEsMTQyLjJjLTEuNiw5LjEsMi44LDIyLjIsMTMuNCwyOS40YzEwLjgsNy4zLDI0LjgsNy40LDM1LjYsMC4yCgkJCWMxMS4yLTcuNCwxNS40LTIwLjYsMTMuOC0yOS42QzE4MSwxNDIuMiwxNjAuMSwxNDIuMiwxMzkuMSwxNDIuMnogTTIxNi4xLDEzNC4xYy0xLjEtMy45LTQuOC02LjYtOS4xLTYuN2MtMTEuMiwwLTIyLjQsMC0zMy43LDAKCQkJYy0xMy4xLDAtMjYuMiwwLTM5LjQsMGMtNC4zLDAtOCwyLjgtOS4xLDYuN0MxNTUuMywxMzQuMSwxODUuNywxMzQuMSwyMTYuMSwxMzQuMXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTU3LjEsODguNmMwLTMuNS0wLjItNywwLTEwLjRjMC40LTYuOCw2LjItMTIsMTMuMi0xMmM3LjEsMCwxMy4xLDUuMSwxMy40LDEyYzAuMyw3LDAuMiwxNC4xLDAuMSwyMS4xCgkJCWMwLDIuNi0xLjYsNC4xLTQsNGMtMi4zLTAuMS0zLjctMS43LTMuNy00LjNjMC02LjIsMC0xMi41LDAtMTguN2MwLTMuOC0yLjQtNi41LTUuNy02LjVjLTMuNCwwLTUuNywyLjYtNS43LDYuNQoJCQljMCw2LjMsMCwxMi42LDAsMTljMCwyLTAuOSwzLjUtMyw0Yy0xLjgsMC40LTMuNC0wLjItNC4yLTEuOWMtMC40LTAuOC0wLjUtMS44LTAuNS0yLjdjLTAuMS0zLjMsMC02LjYsMC0xMAoJCQlDMTU3LDg4LjYsMTU3LjEsODguNiwxNTcuMSw4OC42eiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style="width: 150px; font-size: 9.5px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <b>Persona Responsable:</b></span>
+                    </div>
+                </td>
+                <td rowspan="2" style=" font-size: 10px;">
+                    <img alt="imagen" width="40px" height="40px"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM0MC4yIDM0MC4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNDAuMiAzNDAuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM4Nzg3ODc7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yOTEuMiwxNzMuOWMtNSwxMi44LTEwLDI1LjctMTUuMiwzOC40Yy0wLjUsMS4zLTEuOCwyLjctMy4xLDMuMWMtMSwwLjQtMy4xLTAuMy0zLjYtMS4yCgkJYy0wLjctMS4xLTAuOS0zLjEtMC41LTQuM2MyLjUtNyw1LjItMTMuOSw3LjktMjAuOGMwLjMtMC43LDAuNS0xLjQsMC44LTIuMmMtNzEuOSwwLTE0My42LDAtMjE1LjYsMGMxLjYsNC4xLDMuMSw4LjEsNC42LDEyLjEKCQljMS40LDMuNiwyLjgsNy4yLDQuMSwxMC44YzEsMi42LDAuMiw0LjgtMS45LDUuNmMtMi4zLDAuOS00LjItMC4yLTUuMy0yLjljLTQuMS0xMC42LTguMi0yMS4yLTEyLjItMzEuOGMtMS4xLTIuOC0yLjUtNS42LTIuOC04LjQKCQljLTAuNy03LjQsMy4yLTEzLjIsMTAuNC0xNmM2LjctMi42LDEzLjctMi43LDIwLjgtMmMzLjcsMC40LDcsMS44LDkuMiw0LjdjMS40LDEuOSwyLjQsNC4yLDMsNi41YzEuMyw0LjQsMi4zLDksMy40LDEzLjQKCQljNDkuNywwLDk5LjIsMCwxNDguOSwwYzEuMS00LjMsMi43LTguNiwzLjItMTNjMC43LTUuMyw0LjktMTAuNCwxMS4xLTExLjRjNi44LTEuMiwxMy41LTAuOSwyMC4yLDFjNi4zLDEuOCwxMC40LDUuOSwxMi41LDEyCgkJQzI5Mi4yLDE2OS44LDI5MS43LDE3MS44LDI5MS4yLDE3My45eiBNMjUzLjQsMTc0LjdjLTAuMywxLjItMC43LDIuNy0xLjEsNC40YzgsMCwxNS42LDAuMiwyMy4zLTAuMWM1LjYtMC4yLDkuNS02LjIsNy40LTEwLjkKCQljLTEuMy0zLTMuOC00LjYtNi44LTVjLTUuMi0wLjctMTAuNS0wLjktMTUuNy0wLjljLTEuMywwLTIuOCwxLTMuOSwyYy0xLjUsMS4zLTEuMiwyLjYsMC43LDNjMy4xLDAuNyw2LjQsMS4xLDkuNiwxLjUKCQljMi42LDAuMyw0LjEsMS42LDQuMSw0Yy0wLjEsMi4zLTEuNiwzLjktNC4zLDMuNkMyNjIuMywxNzUuOSwyNTguMSwxNzUuMywyNTMuNCwxNzQuN3ogTTg2LjIsMTc0LjdjLTQuNiwwLjUtOS4xLDEuMi0xMy41LDEuNQoJCWMtMi40LDAuMi00LTEuNC00LTMuN2MwLTIuMiwxLjQtMy43LDMuOC0zLjljMi43LTAuMyw1LjUtMC41LDguMi0xYzEuMS0wLjIsMi4xLTEuMSwzLjItMS43Yy0wLjktMS4xLTEuOC0yLjMtMi44LTMuMgoJCWMtMC41LTAuNS0xLjUtMC43LTIuMi0wLjdjLTQuNiwwLjEtOS4xLDAuMi0xMy43LDAuNWMtMS4xLDAuMS0yLjMsMC42LTMuNCwxYy00LDEuNi02LjMsNC45LTUuNyw4LjNjMC43LDQsNC40LDcuMiw4LjcsNy4zCgkJYzcsMC4xLDE0LjEsMCwyMS4xLDBjMC40LDAsMC45LTAuMSwxLjUtMC4yQzg2LjgsMTc3LjMsODYuNCwxNzUuOCw4Ni4yLDE3NC43eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzMy43LDEwNWMyNC4xLDAsNDgsMCw3MiwwYy0wLjUtNy43LTMuMS0xNC41LTcuOS0yMC40Yy0xLjYtMS45LTMuNS0zLjYtNS4zLTUuNGMtMi4xLTEuOS0yLjQtNC0wLjktNS44CgkJYzEuNS0xLjgsMy43LTEuOSw1LjktMC4xYzkuOCw4LjIsMTUuMSwxOC42LDE1LjgsMzEuNGMwLjEsMS42LDAuNiwyLjUsMiwzLjNjMy4yLDEuOCw1LjUsNC41LDcsNy44YzIuOSw2LjEtMC40LDExLjYtNy4yLDExLjkKCQljLTIsMC4xLTMuOSwwLTUuOSwwYzEuOSwyNi41LTIwLjYsNDMtMzkuNiw0M2MtMTkuNS0wLjEtNDEuMy0xNy4xLTM5LjUtNDNjLTEuOSwwLTMuNywwLTUuNiwwYy03LjItMC4yLTEwLjgtNi03LjItMTIuMgoJCWMxLjYtMi44LDQuMS01LjIsNi42LTcuM2MxLjQtMS4yLDIuMS0yLjIsMi4yLTRjMC44LTEyLjQsNi0yMi41LDE1LjQtMzAuNmMyLjYtMi4yLDQuNy0yLjIsNi40LTAuMmMxLjYsMiwxLjEsNC0xLjQsNi4xCgkJQzEzOC43LDg2LjIsMTM0LjYsOTQuNywxMzMuNywxMDV6IE0xMzguNCwxMjhjLTEuNiw5LjEsMi44LDIyLjIsMTMuNCwyOS40YzEwLjgsNy4zLDI0LjgsNy40LDM1LjYsMC4yCgkJYzExLjItNy40LDE1LjQtMjAuNiwxMy44LTI5LjZDMTgwLjMsMTI4LDE1OS40LDEyOCwxMzguNCwxMjh6IE0yMTUuNCwxMTkuOGMtMS4xLTMuOS00LjgtNi42LTkuMS02LjdjLTExLjIsMC0yMi40LDAtMzMuNywwCgkJYy0xMy4xLDAtMjYuMiwwLTM5LjQsMGMtNC4zLDAtOCwyLjgtOS4xLDYuN0MxNTQuNiwxMTkuOCwxODUsMTE5LjgsMjE1LjQsMTE5Ljh6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTY5LjgsMjg4LjJjLTIxLjMsMC00Mi41LDAtNjMuOCwwYy04LjcsMC0xNS41LTQuOS0xOC41LTEyLjljLTEtMi44LTAuNC00LjksMS44LTUuOAoJCWMyLjItMC45LDQuMiwwLjIsNS4zLDIuOWMyLjMsNS43LDYuMSw4LjMsMTIuMiw4LjNjNDEuOSwwLDgzLjgsMCwxMjUuNiwwYzYuMSwwLDkuOS0yLjYsMTIuMy04LjJjMS4xLTIuNywzLjEtMy44LDUuMy0zCgkJYzIuMiwwLjksMi45LDMuMSwxLjksNS44Yy0zLDgtOS45LDEzLTE4LjUsMTNDMjEyLjMsMjg4LjMsMTkxLjEsMjg4LjIsMTY5LjgsMjg4LjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTEzLjgsMjQwLjljLTAuNywzLjItMS4xLDcuMy0yLjQsMTEuMmMtMi42LDgtOS45LDEzLjEtMTguMywxMy4zYy0xNi42LDAuNS0yNy45LTguMi0zMi4zLTI1LjEKCQljLTAuOC0zLjItMS40LTYuNS0xLjUtOS44Yy0wLjMtNi41LDUuNC0xMi4yLDExLjgtMTEuM2M2LjYsMC45LDEyLjctMC43LDE4LjktMS45YzIuNi0wLjUsNS4zLTAuOSw4LTAuOWM3LjksMCwxMi43LDQuNCwxNC4zLDEzLjEKCQlDMTEyLjksMjMzLDExMy4yLDIzNi41LDExMy44LDI0MC45eiBNMTA2LDIzOS44Yy0wLjQtMi45LTAuOC02LjItMS41LTkuNWMtMS4yLTUuMi0yLjktNi4zLTguMi02LjFjLTAuNiwwLTEuMywwLjEtMS45LDAuMgoJCWMtNy44LDEuMi0xNS40LDQtMjMuNiwyLjZjLTIuNi0wLjUtNC4zLDEuNy0zLjksNC4zYzAuNSwyLjksMSw1LjksMS45LDguOGMzLjEsOS45LDkuMSwxNi43LDIwLjIsMTcuNWM4LjksMC43LDE0LjMtMi43LDE2LjItMTEuMwoJCUMxMDUuNSwyNDQuNCwxMDUuNiwyNDIuMywxMDYsMjM5Ljh6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjUzLjQsMjY1LjRjLTE3LjcsMC0yNi4zLTguMS0yNy4yLTIxLjJjLTAuNC01LjUsMC0xMSwxLjQtMTYuNGMyLjEtOC4xLDcuNS0xMi4yLDE1LjgtMTEuMwoJCWM0LjksMC41LDkuOCwxLjgsMTQuNywyLjVjMi43LDAuNCw1LjUsMC42LDguMiwwLjNjOS0wLjgsMTQuNyw0LjMsMTMuOCwxMy4xYy0wLjcsNy43LTMsMTUtNy43LDIxLjMKCQlDMjY2LjcsMjYxLjgsMjU4LjYsMjY1LjQsMjUzLjQsMjY1LjR6IE0yMzMuNiwyMzkuM2MwLjMsMi42LDAuNCw0LjYsMC43LDYuNWMxLjEsNS41LDMuNiw5LjgsOS40LDExLjNjNy44LDEuOSwxNy43LTAuNCwyMy04LjQKCQljMy4zLTQuOSw0LjktMTAuMyw1LjctMTYuMWMwLjYtNC4zLTEtNS45LTUuMy01LjZjLTMuNSwwLjItNy4xLDAuMS0xMC42LTAuNGMtNC44LTAuNi05LjYtMS45LTE0LjQtMi40Yy00LTAuNC01LjksMS4xLTYuOCw1CgkJQzIzNC41LDIzMi44LDIzNC4xLDIzNi40LDIzMy42LDIzOS4zeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1Ni40LDc0LjRjMC0zLjUtMC4yLTcsMC0xMC40YzAuNC02LjgsNi4yLTEyLDEzLjItMTJjNy4xLDAsMTMuMSw1LjEsMTMuNCwxMmMwLjMsNywwLjIsMTQuMSwwLjEsMjEuMQoJCWMwLDIuNi0xLjYsNC4xLTQsNGMtMi4zLTAuMS0zLjctMS43LTMuNy00LjNjMC02LjIsMC0xMi41LDAtMTguN2MwLTMuOC0yLjQtNi41LTUuNy02LjVjLTMuNCwwLTUuNywyLjYtNS43LDYuNWMwLDYuMywwLDEyLjYsMCwxOQoJCWMwLDItMC45LDMuNS0zLDRjLTEuOCwwLjQtMy40LTAuMi00LjItMS45Yy0wLjQtMC44LTAuNS0xLjgtMC41LTIuN2MtMC4xLTMuMywwLTYuNiwwLTEwQzE1Ni40LDc0LjQsMTU2LjQsNzQuNCwxNTYuNCw3NC40eiIvPgo8L2c+Cjwvc3ZnPgo=">
+                </td>
+                <td style="width: 150px; font-size: 9.5px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <b>Residente de Obra:</b></span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr style="border: 1px solid black;">
+
+                <td style=" font-size: 10px;">
+                    <span>  Fecha: </span>
+                </td>
+
+                <td style="width: 150px; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span> <%= q119_nombreDel.first %>  <%= q119_nombreDel.last %> </span>
+                    </div>
+                </td>
+
+                <td style="width: 150px; font-size: 10px;">
+                    <div class="" style=" padding-left: 10px;">
+                        <span>  <%= personResponsible %></span>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div style="font-size: 9px; padding: 30px">
+        <table style="width: 100%;">
+
+            <tr>
+                <td style="width: 50%;">
+                    <% if (q36_escribaUna !== "") { %>
+
+                        <img src="<%= 'https://www.jotform.com/' + q36_escribaUna %>" style="width: 25em; height:15em"
+                             alt="Imagen2">
+
+                    <% } %>
+                </td>
+                <td style="width: 50%; padding-left: 20px">
+                    <% if (q37_escribaUna37 !== "") { %>
+                        <img src="<%= 'https://www.jotform.com/' + q37_escribaUna37 %>"
+                             style="width: 25em; height:15em" alt="Imagen2">
+                    <% } %>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 50%; "><%= q98_descripcionDe98 %></td>
+                <td style="width: 50%; padding-left: 20px"><%= q100_descripcionDe100 %></td>
+            </tr>
+            <tr>
+                <td style="width: 50%; ">
+                    <% if (q39_escribaUna39 !== "") { %>
+
+                        <img src="<%= 'https://www.jotform.com/' + q39_escribaUna39 %>" style="width: 25em; height:15em"
+                             alt="Imagen2">
+
+                    <% } %>
+                </td>
+                <td style="width: 50%;padding-left: 20px">
+                    <% if (q38_escribaUna38 !== "") { %>
+
+                        <img src="<%= 'https://www.jotform.com/' + q38_escribaUna38 %>"
+                             style="width: 25em; height:15em" alt="Imagen2">
+
+                    <% } %>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style="width: 50%;"><%= q101_descripcionDe101 %></td>
+                <td style="width: 50%;padding-left: 20px"><%= q96_descripcionDe96 %></td>
+            </tr>
+            <tr>
+                <td style="width: 50%;">
+                    <% if (q36_escribaUna !== "") { %>
+
+                        <img src="<%= 'https://submit.jotform.com/' + q36_escribaUna  %>"
+                             style="width: 25em; height:15em" alt="Imagen2">
+
+                    <% } %>
+                </td>
+                <td style="width: 50%;padding-left: 20px">
+                    <% if (q40_escribaUna40 !== "") { %>
+
+                        <img src="<%= 'https://submit.jotform.com/' + q40_escribaUna40  %>"
+                             style="width: 25em; height:15em"
+                             alt="Imagen2">
+
+                    <% } %>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 50%;" ><%= q102_descripcionDe102 %></td>
+                <td style="width: 50%; padding-left: 20px"><%= q96_descripcionDe96 %></td>
+            </tr>
+
+        </table>
+
+
+    </div>
+    <img src="data:image/png;base64,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"
+         style="width: 100%" alt="Test">
+
+
+</div>
+</body>
+
+</html>
