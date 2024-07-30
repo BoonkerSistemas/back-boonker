@@ -108,7 +108,7 @@
 
                 <td style="width: 150px; font-size: 10px;">
                     <div class="" style=" padding-left: 10px;">
-                        <span> <%= q119_nombreDel.first %>  <%= q119_nombreDel.last %> </span>
+                        <span> <%= nombreU %>  <%= apellidoU %></span>
                     </div>
                 </td>
 
@@ -1369,8 +1369,8 @@ font-size: 9.5px;border: 1px solid #58585A; width: 50px">
                             <tr>
                                 <td class="" style="border: 1px solid #000000
 ;font-size: 9px;">
+                                    <h3><%= q114_seguimientoDe114 %> </h3>
 
-                                    <h3><%= q116_seguimientoDe %> </h3>
                                 </td>
 
 
@@ -1854,7 +1854,7 @@ border: 1px solid #58585A;font-size: 9px;">
 
                 <td style="width: 150px; font-size: 10px;">
                     <div class="" style=" padding-left: 10px;">
-                        <span> <%= q119_nombreDel.first %>  <%= q119_nombreDel.last %> </span>
+                        <span> <%= nombreU %>  <%= apellidoU %> </span>
                     </div>
                 </td>
 
@@ -1873,16 +1873,16 @@ border: 1px solid #58585A;font-size: 9px;">
 
             <tr>
                 <td style="width: 50%;">
-                    <% if (q36_escribaUna !== "") { %>
+                    <% if (cargarFotografia!== "") { %>
 
-                        <img src="<%= 'https://www.jotform.com/' + q36_escribaUna %>" style="width: 25em; height:15em"
+                        <img src="<%= cargarFotografia[0] %>" style="width: 25em; height:15em"
                              alt="Imagen2">
 
                     <% } %>
                 </td>
                 <td style="width: 50%; padding-left: 20px">
-                    <% if (q37_escribaUna37 !== "") { %>
-                        <img src="<%= 'https://www.jotform.com/' + q37_escribaUna37 %>"
+                    <% if (cargarFotografia106 !== "") { %>
+                        <img src="<%=  cargarFotografia106[0] %>"
                              style="width: 25em; height:15em" alt="Imagen2">
                     <% } %>
                 </td>
@@ -1894,17 +1894,17 @@ border: 1px solid #58585A;font-size: 9px;">
             </tr>
             <tr>
                 <td style="width: 50%; ">
-                    <% if (q39_escribaUna39 !== "") { %>
+                    <% if (cargarFotografia107 !== "") { %>
 
-                        <img src="<%= 'https://www.jotform.com/' + q39_escribaUna39 %>" style="width: 25em; height:15em"
+                        <img src="<%=   cargarFotografia107[0] %>" style="width: 25em; height:15em"
                              alt="Imagen2">
 
                     <% } %>
                 </td>
                 <td style="width: 50%;padding-left: 20px">
-                    <% if (q38_escribaUna38 !== "") { %>
+                    <% if (cargarFotografia108 !== "") { %>
 
-                        <img src="<%= 'https://www.jotform.com/' + q38_escribaUna38 %>"
+                        <img src="<%= cargarFotografia108[0] %>"
                              style="width: 25em; height:15em" alt="Imagen2">
 
                     <% } %>
@@ -1918,17 +1918,17 @@ border: 1px solid #58585A;font-size: 9px;">
             </tr>
             <tr>
                 <td style="width: 50%;">
-                    <% if (q36_escribaUna !== "") { %>
+                    <% if (cargarFotografia109 !== "") { %>
 
-                        <img src="<%= 'https://submit.jotform.com/' + q36_escribaUna  %>"
+                        <img src="<%= cargarFotografia109[0]  %>"
                              style="width: 25em; height:15em" alt="Imagen2">
 
                     <% } %>
                 </td>
                 <td style="width: 50%;padding-left: 20px">
-                    <% if (q40_escribaUna40 !== "") { %>
+                    <% if (cargarFotografia132 !== "") { %>
 
-                        <img src="<%= 'https://submit.jotform.com/' + q40_escribaUna40  %>"
+                        <img src="<%= cargarFotografia132[0] %>"
                              style="width: 25em; height:15em"
                              alt="Imagen2">
 
